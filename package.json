@@ -1,0 +1,22 @@
+{
+  "name": "theme2017",
+  "version": "1.0.0",
+  "description": "Projet de site asso",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nonobu/theme2017.git"
+  },
+  "author": "Science Gateway Dev Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nonobu/theme2017/issues"
+  },
+  "homepage": "https://github.com/Nonobu/theme2017#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2"
+  }
+}
