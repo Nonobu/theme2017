@@ -1,0 +1,21 @@
+@mixin search-form()
+  position: relative
+  label
+    .search-field
+      +size(90% 3em)
+      +padding(0.5em)
+      background-color: transparent
+      border: 1px solid $clear
+      border-right: none
+      color: $clear
+      font-family: $Body
+  .search-submit
+    +padding(0.5em)
+    +size(10% 3em)
+    +position(absolute, 0 0 null null)
+    background-color: transparent
+    border: 1px solid $clear
+    border-left: none
+    .fa
+      color: $clear
+      font-size: modular-scale(1)

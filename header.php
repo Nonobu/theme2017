@@ -8,32 +8,52 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<div class="site-inner">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-header-main">
-				<div class="site-branding">
+	<header class="main-header" role="banner">
+		<ul class="main-header-parts">
+			<li class="main-header-part logo">
+				<!-- LOGO -->
+				<img src="http://lorempicsum.com/futurama/500/500/4" />
 
+			</li>
+			<li class="main-header-part navigation">
+				<!-- SITE TITLE & DESCRIPTION -->
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php endif;
-
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
+				<!-- NAVIGATION -->
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			</li>
+			<li class="main-header-part information">
+				<!-- CONNEXION -->
+				<div class="connexion">
+
+				</div>
+				<!-- RESEARCH -->
+				<div class="research">
+					<?php get_search_form(); ?>
+				</div>
+			</li>
+		</ul><!-- .main-header-parts -->
+	</header><!-- .main-header -->
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+
+
+
+
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
@@ -88,5 +108,3 @@
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
 		</header><!-- .site-header -->
-
-		<div id="content" class="site-content">
