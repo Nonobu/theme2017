@@ -1,0 +1,48 @@
+.site-footer
+  +display(flex)
+  +flex-direction(row)
+  +justify-content(center)
+  +align-items(stretch)
+  font-family: $Body
+  font-size: modular-scale(1)
+  .footer-part
+    +reset-list
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(flex-end)
+    +align-items(stretch)
+    &.left
+      width: 25%
+    &.right
+      width: 75%
+    .contact
+      height: 75%
+      +padding(2em)
+      background-color: $primary
+      color: $clear
+      +pirate-forms
+      .contact-list
+        +reset-list
+    .partners
+      height: 25%
+      +padding(0.5em 2em)
+    .map
+      +size(100% 20em)
+      iframe
+        pointer-events: none
+        position: relative
+        +size(100%)
+        &.clicked
+          pointer-events: auto
+    .address
+      background-color: $accent
+      color: $clear
+      text-align-last: center
+      +padding(3em 1em)
+    .legals
+      background-color: $darker
+      color: $clear
+      text-align: center
+      +padding(1em)
+      .site-description
+        +margin(0)

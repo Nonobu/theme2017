@@ -19,3 +19,30 @@
     .fa
       color: $clear
       font-size: modular-scale(1)
+
+@mixin pirate-forms
+  .pirate_forms_wrap
+    +margin(3em 0)
+    .pirate_forms
+      .form_field_wrap
+        width: 100%
+        input, textarea
+          width: 100%
+          border: none
+          +padding(0.5em)
+          font-size: modular-scale(-1)
+          +placeholder
+            font-style: italic
+            font-family: $Body
+        textarea
+          min-height: 10em
+          resize: vertical
+        button
+          font-family: $Body
+          color: $clear
+          background-color: transparent
+          border: 1px solid $clear
+          +padding(0.2em 0.5em)
+          font-size: modular-scale(-1)
+          float: left
+          cursor: pointer
