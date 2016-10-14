@@ -1,0 +1,55 @@
+.main-header
+  overflow: hidden
+  height: $HeaderHeight
+  border-bottom: 1px solid $darker
+  .main-header-parts
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(center)
+    +align-items(stretch)
+    +reset-list
+    .main-header-part
+      &.logo
+        width: $HeaderHeight
+        background-color: $clear
+        img
+          width: 100%
+      &.navigation
+        position: relative
+        width: 50%
+        background-color: $dark
+        +padding(5em 1em 1em 1em)
+        +flex-grow(1)
+        +display(flex)
+        +flex-direction(column)
+        +justify-content(space-between)
+        +align-items(stretch)
+        .site-title
+          +margin(0)
+          text-align: center
+          font-size: modular-scale(5)
+          font-weight: bold
+          a
+            font-family: $Headlines
+            color: $clear
+            +padding(0.2em 0.5em)
+            border: 1px solid $clear
+      &.information
+        width: $HeaderHeight + em(100)
+        background-color: $primary
+        +display(flex)
+        +flex-direction(column)
+        +justify-content(center)
+        +align-items(stretch)
+        .connexion
+          height: 70%
+        .research
+          height: 30%
+          background-color: $accent
+          +padding(1em)
+          +display(flex)
+          +flex-direction(column)
+          +justify-content(center)
+          +align-items(stretch)
+          .search-form
+            +search-form()

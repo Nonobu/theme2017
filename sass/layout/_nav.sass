@@ -1,0 +1,30 @@
+.menu-header-menu-container
+  +position(absolute, null 0 0 0)
+  .menu
+    +reset-list
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(space-around)
+    +align-items(stretch)
+    .menu-item
+      width: 100%
+      text-align-last: center
+      a
+        +padding(1em)
+        display: block
+        width: 100%
+        color: $clear
+        font-family: $Headlines
+        font-size: modular-scale(2)
+
+.menu-footer-menu-container
+  .menu
+    +reset-list
+  .menu-item
+    width: 100%
+    text-align-last: center
+    a
+      display: block
+      width: 100%
+      color: $clear
+      font-family: $Body
